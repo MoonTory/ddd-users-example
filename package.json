@@ -1,0 +1,11 @@
+{
+  "name": "excaliber",
+  "version": "1.0.0",
+  "repository": "git@github.com:MoonTory/clear-summit-challenge.git",
+  "author": "Gustavo Quinta | MoonTory <gustavoqnt40@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "name": "@excaliber/users",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "repository": "git@github.com:MoonTory/ddd-starter-ts.git",
+  "author": "Gustavo Quinta | MoonTory <gustavoqnt40@gmail.com>",
+  "scripts": {
+    "test": "concurrently -k -s first \"docker-compose -f docker-compose.test.yml up\" \"jest\" && docker-compose -f docker-compose.test.yml down --volumes",
+    "run:dev": "NODE_ENV=development nodemon dist/main.js",
+    "start:dev": "concurrently -k -s first \"docker-compose -f docker-compose.yml up\" \"nodemon --exec 'ts-node -r tsconfig-paths/register' src/bin/index.ts\" && docker-compose -f docker-compose.yml down --volumes"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.17",
+    "@types/jest": "^29.5.3",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^20.4.10",
+    "@types/supertest": "^2.0.12",
+    "@types/swagger-ui-express": "^4.1.6",
+    "@types/webpack": "^5.28.1",
+    "@types/webpack-node-externals": "^3.0.0",
+    "concurrently": "^8.2.2",
+    "jest": "^29.6.2",
+    "nodemon": "^3.0.1",
+    "rimraf": "^5.0.1",
+    "supertest": "^6.3.3",
+    "ts-jest": "^29.1.1",
+    "ts-loader": "^9.4.4",
+    "ts-node": "^10.9.1",
+    "tsconfig-paths": "^4.2.0",
+    "tsconfig-paths-webpack-plugin": "^4.1.0",
+    "typescript": "^5.1.6",
+    "webpack": "^5.88.2",
+    "webpack-cli": "^5.1.4",
+    "webpack-node-externals": "^3.0.0",
+    "webpack-shell-plugin-next": "^2.3.1"
+  },
+  "dependencies": {
+    "concurrently": "^8.2.2",
+    "express": "^4.18.2",
+    "express-jsdoc-swagger": "^1.8.0",
+    "jest-mock-extended": "^3.0.7",
+    "morgan": "^1.10.0",
+    "pg": "^8.12.0",
+    "reflect-metadata": "^0.2.2",
+    "swagger-jsdoc": "^6.2.8",
+    "swagger-ui-express": "^5.0.1",
+    "tsoa": "^6.4.0",
+    "typeorm": "^0.3.20",
+    "zod": "^3.23.8"
+  }
+}
